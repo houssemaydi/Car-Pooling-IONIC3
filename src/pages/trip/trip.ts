@@ -81,10 +81,10 @@ export class TripPage {
 
   setvalue() {
     if (this.reserved == true) {
-      this.buttonValue = "batalt";
+      this.buttonValue = "- BATALT";
     }
     else{
-      this.buttonValue = "reservi";
+      this.buttonValue = "+ RESERVI";
 
     }
   }

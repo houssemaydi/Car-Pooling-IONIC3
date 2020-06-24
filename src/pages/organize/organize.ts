@@ -1,7 +1,10 @@
+import { TripListPage } from './../trip-list/trip-list';
 import { User } from './../../model/user.model';
 import { Trip } from './../../model/trip.model';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
+
 // start fire base
 import * as firebase from "firebase";
 // end fire base
@@ -30,7 +33,7 @@ export class OrganizePage {
   participations: User[]=[];
   ref = firebase.database().ref('trips/');
 
-  constructor(private storage: Storage,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public alertCtrl: AlertController,private storage: Storage,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -60,10 +63,19 @@ export class OrganizePage {
       upload.set(trip);
 //       var key = Object.keys(snapshot.val())[0];
 // console.log(key);
+this.showAlert();
+this.navCtrl.push(TripListPage);
+
       console.log(trip);
       });
 
 }
-
+showAlert() {
+  const alert = this.alertCtrl.create({
+    title: 'Rabby Iwaselek Selem' ,
+    buttons: ['OK']
+  });
+  alert.present();
+}
 
 }

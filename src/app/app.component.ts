@@ -28,11 +28,12 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Login', component: HomePage },
-      { title: 'Signup', component: SignUpPage },
-      { title: 'Profile Setting', component: MyprofilePage },
-      { title: 'Choise', component: ChoisePage },
-      { title: 'Setting', component: ProfileSettingPage },
+      { title: 'Odekhl lil Compte', component: HomePage },
+      { title: 'Hay Ta3mel Compte ? ', component: SignUpPage },
+      { title: 'Profili Ena', component: MyprofilePage },
+      { title: 'Covoiturage ?', component: ChoisePage },
+      { title: 'Badel f Profili', component: ProfileSettingPage },
+
 
 
     ];

@@ -11,17 +11,26 @@
 </ion-header>
 
 <ion-content padding >
+
+  <ion-card>
+
+    <ion-item>
+      
+      <div item-start>
+      <h2>3aslema<span> {{this.name}} {{this.prename}}</span></h2>
+    </div>
+    <ion-avatar item-end>
+      <img src="../../assets/imgs/avatar1.png" style="width: 70px !important;height: 70px !important;">
+    </ion-avatar>
+    </ion-item>
+  </ion-card>  
   <div class="profile-item">
-  <div class="avatars" >
-    <img src="../../assets/imgs/avatar1.png" >
-  </div>
-  <h2>{{this.name}}<span> {{this.prename}}</span></h2> 
-  <h2>{{this.num}}</h2>
+
 <ion-row> 
 
   <ion-col align-self-center text-center  col-6>
     <button ion-button color="secondary"danger round item-end icon-start small (click)="getActiveTrip()" >
-      <ion-icon name="call"></ion-icon>Kalemni
+      <ion-icon name="call"></ion-icon>3andek Matbadel ?
     </button>
     <!-- <ion-note>
       11h ago
@@ -45,6 +54,35 @@
   </ion-col>
 </ion-row>
 </div>
+<ion-card>
+
+
+  <ion-list>
+    <button ion-item>
+      <ion-icon name="chatbubble-ellipses-outline" item-start></ion-icon>
+      a7ki les7abek 3lina
+    </button>
+
+    <button ion-item>
+      <ion-icon name="medical" item-start></ion-icon>
+      3andekchy haja t7eb t9oulha ?
+    </button>
+
+    <button ion-item>
+      <ion-icon name="cafe" item-start></ion-icon>
+      Test7a9chy 7aja ?
+    </button>
+
+    <button ion-item>
+      <ion-icon name="paw" item-start></ion-icon>
+      Deconnecty !
+    </button>
+
+   
+
+  </ion-list>
+</ion-card>
+
 <div style="background-color: green;margin-top: 30px;" *ngFor="let item of tabib">
   <h3>Actif : </h3>
   <ion-row>

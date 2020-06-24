@@ -8,6 +8,7 @@ import { SignUpPage } from "../sign-up/sign-up";
 import * as firebase from "firebase";
 // end fire base
 import { Storage } from "@ionic/storage";
+import { AlertController } from 'ionic-angular';
 
 @Component({
   selector: "page-home",
@@ -22,7 +23,7 @@ export class HomePage {
   ref = firebase.database().ref("users/");
   finalList: User[] = [];
 
-  constructor(public storage: Storage, public navCtrl: NavController) {
+  constructor(public alertCtrl: AlertController,public storage: Storage, public navCtrl: NavController) {
     this.user = new User("aaa","aaa","aaa","aaa","aaa",5555);
     let ref = firebase.database().ref("users");
     this.email='';
@@ -79,14 +80,20 @@ export class HomePage {
         console.log(this.liste3);
         console.log(this.user);
         this.storage.set('user', this.user);
-
+        this.showAlert(this.user.name);
         this.navCtrl.push(ChoisePage);
       }
     } catch (e) {
       console.log(e);
     }
   }
-
+  showAlert(s:string) {
+    const alert = this.alertCtrl.create({
+      title: 'Mare7ba si '+s.toUpperCase(),
+      buttons: ['OK']
+    });
+    alert.present();
+  }
   // methode2() {
   //   var user = firebase.auth().currentUser;
   //   var name, emaill, photoUrl, uid, emailVerified;
