@@ -1,0 +1,82 @@
+<!--
+  Generated template for the TripListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>tripList</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let item of items">
+
+    <ion-item>
+      <ion-avatar item-start >
+        <img src="../../assets/imgs/avatar1.png" class="avatar">
+      </ion-avatar>
+      <h2>{{item.user.name}}<span>  {{item.user.prename}}</span></h2> 
+    
+
+      <!-- <h2>{{this.name}}<span>{{this.prename}}</span></h2> -->
+      <p>il y à 3h</p>
+    </ion-item>
+  
+    <ion-row>
+      <ion-col size="6" text-center>
+        <div>
+          <img src="../../assets/imgs/{{item.departure}}.jpg"  class="Destination">
+          <h4>{{item.departure}}</h4>
+        </div>
+      </ion-col>
+      <ion-col size="6" text-center>
+        <div >
+          <img src="../../assets/imgs/{{item.destination}}.jpg" class="Destination">
+          <h4>{{item.destination}}</h4>
+        </div>
+      </ion-col>
+    </ion-row>
+  
+    <ion-card-content>
+      <p><b>Date w Wa9t:   </b> {{item.date}}</p>
+      <p ><b>Place Disponible:</b>           
+        <ion-icon name="person" ></ion-icon>
+        <ion-icon name="person"></ion-icon>
+        <ion-icon name="person"></ion-icon>
+        <ion-icon name="person"></ion-icon>
+
+      </p>
+      <p><b>Bagage Disponible: </b>{{item.bags}} </p>
+      <p><b>Karehba: </b>{{item.car}}</p>
+    </ion-card-content>
+  
+    <ion-row>
+      <!-- <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>12 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>4 Comments</div>
+        </button>
+      </ion-col> -->
+
+      <ion-col align-self-center text-center offset-6 col-6>
+        <button ion-button outline item-end icon-start small (tap)="detail($event, item)">
+          <ion-icon name="information"></ion-icon>more info
+        </button>
+        <!-- <ion-note>
+          11h ago
+        </ion-note> -->
+      </ion-col>
+    </ion-row>
+  
+  </ion-card>
+  
+</ion-content>

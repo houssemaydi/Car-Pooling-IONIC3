@@ -1,0 +1,61 @@
+page-myprofile {
+    // .profile-item {
+    //     text-align: center;
+    //   }
+    //   .profile-picture {
+    //     border: 1px solid rgba(0, 0, 0, 0.25);
+    //     padding: 3px;
+    //     border-radius: 100%;
+    //     -webkit-box-sizing: content-box;
+    //     -moz-box-sizing: content-box;
+    //     box-sizing: content-box;
+    //     margin: 0 auto;
+    //     width: 128px;
+    //     height: 128px;
+    //     overflow: hidden;
+    //   }
+    
+}
+  .profile-item {
+        text-align: center;
+      }
+.avatars {
+ 
+    margin: auto !important;
+    width:40vw;
+    height: 40vw;
+
+}
+.thumbnails {
+    width:23vw;
+    height: 30vw;
+  
+    padding-right:5%;
+
+}
+.nameLabel{
+    font-family: "Titillium Web script=all rev=1";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    
+}
+.profile{
+    padding-top:5%;
+    padding-bottom: 5%;
+    text-align: center;
+    width:100% !important;
+}
+.shadow-red{
+    
+    border-radius: 50% !important;
+    margin: auto;
+}
+ion-header ion-toolbar ion-title{
+    font-family: "Titillium Web script=all rev=1";
+    font-weight: 600;
+    font-style: normal;
+    font-size:16px;
+    text-transform: capitalize;
+}
+

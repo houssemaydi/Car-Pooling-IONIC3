@@ -1,0 +1,84 @@
+<!--
+  Generated template for the OrganizePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>organize</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row >
+    <ion-col col-12>
+      <ion-item>
+        <ion-label>Mnin kharej ?</ion-label>
+        <ion-select [(ngModel)]="departure"  cancelText="Laaa" okText="Mrigel!">
+          <ion-option value="Bizerte">Bizerte</ion-option>
+          <ion-option value="Tunis">Tunis</ion-option>
+          <ion-option value="Sousse">Sousse</ion-option>
+          <ion-option value="Sfax">Sfax</ion-option>
+          <ion-option value="Gabes">Gabes</ion-option>
+          <ion-option value="Jerba">Jerba</ion-option>
+          
+  
+        </ion-select>
+      </ion-item>
+    </ion-col>
+    
+    <ion-col col-12>
+      <ion-item>
+        <ion-label>Lwin ?</ion-label>
+        <ion-select [(ngModel)]="destination"
+         cancelText="Nah" okText="Okay!">
+          <ion-option value="Bizerte">Bizerte</ion-option>
+          <ion-option value="Tunis">Tunis</ion-option>
+          <ion-option value="Sousse">Sousse</ion-option>
+          <ion-option value="Sfax">Sfax</ion-option>
+          <ion-option value="Gabes">Gabes</ion-option>
+          <ion-option value="Jerba">Jerba</ion-option>
+  
+        </ion-select>
+      </ion-item>
+    </ion-col>
+
+    <ion-item>
+      <ion-label>Date w Wa9t:</ion-label>
+      <ion-datetime displayFormat="D MMM YYYY H:mm" min="2020" max="2021" value="2005-06-17T11:06Z" [(ngModel)]="dateAndTime"></ion-datetime>
+    </ion-item>
+    <!-- <ion-label>Date w Wa9t:</ion-label>
+    <ion-datetime displayFormat="D MMM YYYY H:mm" min="2020" max="2021" value="2005-06-17T11:06Z" [(ngModel)]="dateAndTime"></ion-datetime>
+  </ion-item> -->
+    <!-- <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>elwa9t:</ion-label>
+      <ion-datetime displayFormat="HH:mm"></ion-datetime>
+    </ion-item> -->
+    <ion-item>
+      <ion-label stacked>9Adeh men blasa ?</ion-label>
+      <ion-input type="number" [(ngModel)]="availablePlaces"></ion-input>
+    </ion-item>   <ion-item>
+      <ion-label stacked>Essoum :</ion-label>
+      <ion-input type="number" [(ngModel)]="price"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label stacked>9adeh men valise ?</ion-label>
+      <ion-input type="number" [(ngModel)]="bags"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label stacked>Naw3eyet Karehba :</ion-label>
+      <ion-input type="text" [(ngModel)]="car"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label stacked>Commentaire :</ion-label>
+      <ion-input type="number" [(ngModel)]="comment"> </ion-input>
+    </ion-item> 
+</ion-row>
+<button ion-button full color="secondary" round (tap)="orgenize()">Mrigel</button>
+
+</ion-content>

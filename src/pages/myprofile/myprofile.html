@@ -1,0 +1,142 @@
+<!--
+  Generated template for the MyprofilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>myprofile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+  <div class="profile-item">
+  <div class="avatars" >
+    <img src="../../assets/imgs/avatar1.png" >
+  </div>
+  <h2>{{this.name}}<span> {{this.prename}}</span></h2> 
+  <h2>{{this.num}}</h2>
+<ion-row> 
+
+  <ion-col align-self-center text-center  col-6>
+    <button ion-button color="secondary"danger round item-end icon-start small (click)="getActiveTrip()" >
+      <ion-icon name="call"></ion-icon>Kalemni
+    </button>
+    <!-- <ion-note>
+      11h ago
+    </ion-note> -->
+  </ion-col>
+  <ion-col align-self-center text-center  col-6>
+    <button ion-button color="danger"danger round item-end icon-start small >
+      <ion-icon name="warning"></ion-icon>Report
+    </button>
+    <!-- <ion-note>
+      11h ago
+    </ion-note> -->
+  </ion-col>
+  <ion-col align-self-center text-center  col-12>
+    <button ion-button color="primary" round item-end icon-start small (click)="getuserTrips(this.id)">
+      <ion-icon name="ios-time"></ion-icon>Historique
+    </button>
+    <!-- <ion-note>
+      11h ago
+    </ion-note> -->
+  </ion-col>
+</ion-row>
+</div>
+<div style="background-color: green;margin-top: 30px;" *ngFor="let item of tabib">
+  <h3>Actif : </h3>
+  <ion-row>
+    <ion-col size="6" text-center>
+      <div>
+        <img src="../../assets/imgs/sfax.jpg"  class="Destination">
+        <h4>{{item.departure}}</h4>
+      </div>
+    </ion-col>
+    <ion-col size="6" text-center>
+      <div >
+        <img src="../../assets/imgs/tunis.jpg" class="Destination">
+        <h4>{{item.destination}}</h4>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-card-content>
+    <p><b>Date w Wa9t:   </b>  {{item.date}}</p>
+    <p><b>Place Disponible:</b>           
+      <ion-icon name="person"></ion-icon>
+      <ion-icon name="person"></ion-icon>
+      <ion-icon name="person"></ion-icon>
+      <ion-icon name="person"></ion-icon>
+
+    </p>
+    <p><b>Bagage Disponible: </b>{{item.bags}}</p>
+    <p><b>Karehba: </b>{{item.car}}</p>
+  </ion-card-content>
+</div>
+  <div style="background-color: rgb(240, 8, 19);margin-top: 30px;" *ngFor="let item of tab">
+    <h3>Historique : </h3>
+
+    
+    <ion-row>
+      <ion-col size="6" text-center>
+        <div>
+          <img src="../../assets/imgs/sfax.jpg"  class="Destination">
+          <h4>{{item.departure}}</h4>
+        </div>
+      </ion-col>
+      <ion-col size="6" text-center>
+        <div >
+          <img src="../../assets/imgs/tunis.jpg" class="Destination">
+          <h4>{{item.destination}}</h4>
+        </div>
+      </ion-col>
+    </ion-row>
+  
+    <ion-card-content>
+      <p><b>Date w Wa9t:   </b>  {{item.date}}</p>
+      <p><b>Place Disponible:</b>           
+        <ion-icon name="person"></ion-icon>
+        <ion-icon name="person"></ion-icon>
+        <ion-icon name="person"></ion-icon>
+        <ion-icon name="person"></ion-icon>
+  
+      </p>
+      <p><b>Bagage Disponible: </b>{{item.bags}}</p>
+      <p><b>Karehba: </b>{{item.car}}</p>
+    </ion-card-content>
+  </div>
+
+</ion-content>
+
+<!-- <ion-header>
+  <ion-toolbar>
+    
+    <ion-title>Profile</ion-title>
+    <button slot="end" (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="profile">
+    <ion-avatar class="avatars">
+      <img  src="../../assets/imgs/avatar1.png">
+    </ion-avatar>
+    <ion-label class="nameLabel">{{this.name}} {{this.prename}}</ion-label>
+   
+  </div>
+  <button (click)="showinfo()" expand="block" class="shadow-red">About {{this.name}} <ion-icon name="arrow-dropdown" slot="end"></ion-icon></button>
+
+  
+<ion-card>
+
+
+    <button  (click)="setpriv()" slot="end">
+      Get Privelege
+     </button>
+  </ion-card>
+    
+</ion-content> -->

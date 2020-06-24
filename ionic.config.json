@@ -1,0 +1,7 @@
+{
+  "name": "Wasalny",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,49 @@
+import { TestPage } from "./../test/test";
+import { User } from "./../../model/user.model";
+import { ChoisePage } from "./../choise/choise";
+import { Component } from "@angular/core";
+import { NavController } from "ionic-angular";
+import { SignUpPage } from "../sign-up/sign-up";
+// start fire base
+import * as firebase from "firebase";
+// end fire base
+import { Storage } from "@ionic/storage";
+import { snapshotToArray } from '../../app/envirement';
+
+
+@Component({
+  selector: "page-home",
+  templateUrl: "home.html",
+})
+export class HomePage {
+  user:User;
+    liste3: any = [];
+  email: string="";
+  password: string;
+  id: string;
+  ref = firebase.database().ref("users/");
+  finalList: User[] = [];
+  userList;
+  constructor(public storage: Storage, public navCtrl: NavController) {
+    this.ref.on('value', resp =>{
+      this.userList = snapshotToArray(resp);
+
+    });      
+  
+  }
+
+  async login(email:string,password:string){
+    console.log("dkhalna"+email+password);
+    this.userList.forEach(function (value) {
+      console.log(value);
+      console.log(value.email);
+      console.log(value.password);
+
+      if (value.email == email && value.password == password ){
+        this.storage.set('user', value);
+        this.navCtrl.push(ChoisePage);
+
+      }
+        })
+  }      
+  }
