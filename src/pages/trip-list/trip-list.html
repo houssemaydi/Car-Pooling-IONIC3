@@ -4,19 +4,19 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header class="t">
   <ion-navbar>
     <ion-title>tripList</ion-title>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="back"> 
   <ion-searchbar ></ion-searchbar>
 
-  <ion-card *ngFor="let item of items">
+  <ion-card *ngFor="let item of items" class="t">
 
-    <ion-item>
+    <ion-item class="t">
       <ion-avatar item-start >
         <img src="../../assets/imgs/avatar1.png" class="avatar">
       </ion-avatar>
@@ -70,8 +70,8 @@
       </ion-col> -->
 
       <ion-col align-self-center text-center offset-6 col-6>
-        <button ion-button outline item-end icon-start small (tap)="detail($event, item)">
-          <ion-icon name="information"></ion-icon>more info
+        <button ion-button item-end icon-start style="background-color: #4cd3c2;" small (tap)="detail($event, item)">
+          <ion-icon name="md-information-circle"></ion-icon>ENZEL
         </button>
         <!-- <ion-note>
           11h ago

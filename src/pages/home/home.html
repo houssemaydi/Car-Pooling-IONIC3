@@ -1,30 +1,32 @@
 
-<ion-content padding>
+<ion-content padding class="back">
 
   <ion-list >
     <div text-center>
       <img class="logo" src="../../assets/imgs/covoiturage.png" alt="test">
    </div>
  
-  <ion-item>
+  <ion-item class="t">
 
-      <ion-label stacked >Email Mte3ek:</ion-label>
+      <ion-label stacked ><h2>Email Mte3ek:</h2></ion-label>
       <ion-input type="text" [(ngModel)]="email"></ion-input>
     </ion-item>
   
   
-    <ion-item>
-      <ion-label stacked >Mot de Passek:</ion-label>
+    <ion-item class="t">
+      <ion-label stacked ><h2>Mot de Passek:</h2></ion-label>
       <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
   
   </ion-list>
   <button ion-button full color="secondary" round (tap)="login(this.email,this.password)">Marehba</button>
   <br>
+  <br>
+  <br>
   <div text-center>
-    <p>ma3andekch compte ? 
+    <h4>ma3andekch compte ? 
       <a (tap)="nextSignUp()">Enzel Houni</a>
-    </p>
+    </h4>
  </div>
 
 </ion-content>

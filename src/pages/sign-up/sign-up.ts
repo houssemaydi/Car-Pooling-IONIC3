@@ -1,3 +1,5 @@
+import { ChoisePage } from './../choise/choise';
+import { HomePage } from './../home/home';
 import { User } from './../../model/user.model';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -53,6 +55,7 @@ export class SignUpPage {
         let upload = firebase.database().ref('users/').push();
         upload.set(userr);
         console.log(userr);
+        this.navCtrl.push(ChoisePage);
         // ...
       } else {
         // User is signed out.

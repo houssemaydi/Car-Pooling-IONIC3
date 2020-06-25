@@ -1,3 +1,4 @@
+import { ChoisePage } from './../choise/choise';
 import { User } from './../../model/user.model';
 import { Storage } from '@ionic/storage';
 import { Component } from '@angular/core';
@@ -62,5 +63,7 @@ export class ProfileSettingPage {
 
   changeval(){
     this.update(this.name,this.prename,this.mail,this.numtel);
+    this.navCtrl.push(ChoisePage);
+
   }
 }

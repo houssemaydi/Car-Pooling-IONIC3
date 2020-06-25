@@ -10,7 +10,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding >
+<ion-content padding class="back">
 
   <ion-card>
 
@@ -30,20 +30,13 @@
 
   <ion-col align-self-center text-center  col-6>
     <button ion-button color="secondary"danger round item-end icon-start small (click)="getActiveTrip()" >
-      <ion-icon name="call"></ion-icon>3andek Matbadel ?
+      <ion-icon name="md-share"></ion-icon>3andek Matbadel ?
     </button>
     <!-- <ion-note>
       11h ago
     </ion-note> -->
   </ion-col>
-  <ion-col align-self-center text-center  col-6>
-    <button ion-button color="danger"danger round item-end icon-start small >
-      <ion-icon name="warning"></ion-icon>Report
-    </button>
-    <!-- <ion-note>
-      11h ago
-    </ion-note> -->
-  </ion-col>
+
   <ion-col align-self-center text-center  col-12>
     <button ion-button color="primary" round item-end icon-start small (click)="getuserTrips(this.id)">
       <ion-icon name="ios-time"></ion-icon>Historique
