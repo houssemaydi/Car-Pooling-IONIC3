@@ -1,3 +1,4 @@
+import { User } from './../../model/user.model';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -14,8 +15,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
-
+  ussr:User;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.ussr = this.navParams.get("u");
+
   }
 
   ionViewDidLoad() {

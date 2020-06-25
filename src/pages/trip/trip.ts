@@ -107,7 +107,8 @@ export class TripPage {
     console.log("ionViewDidLoad TripPage");
   }
   toProfile() {
-    this.navCtrl.push(ProfilePage);
+        this.navCtrl.push(ProfilePage,{u:this.item.user});
+
   }
 
   booking(key) {
