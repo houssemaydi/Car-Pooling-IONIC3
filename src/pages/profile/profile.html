@@ -22,4 +22,48 @@
   </ion-item>
   
 </div>
+<ion-col align-self-center text-left  col-6>
+  <h3>Historique : </h3>
+</ion-col>
+
+<ion-col align-self-center text-center  col-6>
+  <button ion-button color="primary" round item-end icon-start small (click)="getuserTrips(ussr.id)">
+    <ion-icon name="ios-time"></ion-icon>Historique
+  </button>
+  <!-- <ion-note>
+    11h ago
+  </ion-note> -->
+</ion-col>
+
+<div style="background-color:transparent;margin-top: 30px;" *ngFor="let item of tab">
+
+  
+  <ion-row>
+    <ion-col size="6" text-center>
+      <div>
+        <img src="../../assets/imgs/{{item.departure}}.jpg"  class="Destination">
+        <h4>{{item.departure}}</h4>
+      </div>
+    </ion-col>
+    <ion-col size="6" text-center>
+      <div >
+        <img src="../../assets/imgs/{{item.destination}}.jpg" class="Destination">
+        <h4>{{item.destination}}</h4>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-card-content>
+    <p><b>Date w Wa9t:   </b>  {{item.date}}</p>
+    <p><b>Place Disponible:</b>           
+      <ion-icon name="person"></ion-icon>
+      <ion-icon name="person"></ion-icon>
+      <ion-icon name="person"></ion-icon>
+      <ion-icon name="person"></ion-icon>
+
+    </p>
+    <p><b>Bagage Disponible: </b>{{item.bags}}</p>
+    <p><b>Karehba: </b>{{item.car}}</p>
+  </ion-card-content>
+</div>
 </ion-content>

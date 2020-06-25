@@ -1,3 +1,4 @@
+import { snapshotToArray } from './../../app/envirement';
 import { Trip } from './../../model/trip.model';
 import { User } from './../../model/user.model';
 import { Component } from '@angular/core';
@@ -27,7 +28,10 @@ export class ProfilePage {
   activeTrip;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.ussr = this.navParams.get("u");
-
+    this.ref.on('value', resp =>{
+      this.items = snapshotToArray(resp);
+      
+    });
   }
 
   ionViewDidLoad() {
@@ -37,7 +41,6 @@ export class ProfilePage {
   getuserTrips(idd:string){
     var tabb= [];
 
-    console.log("items: "+ this.items);
     this.items.forEach(function (value) 
     {
       console.log("valueeeeeee"+value);
@@ -57,7 +60,17 @@ export class ProfilePage {
     console.log(tabb);
     this.tab=tabb;
     console.log("this tab: " + this.tab);
-   // this.getTripbyId(this.active);
+    this.getTripbyId(this.active);
   }
-
+  getTripbyId(id:string){
+   
+    for (let value of this.items) {
+       console.log("valueee"+value.id);
+      if (value.id == id) {
+        this.tabib.push(value);
+        return(value);
+      } 
+    }
+  
+   }
 }
